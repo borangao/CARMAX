@@ -1,0 +1,16 @@
+Package: CARMAX
+Title: CARMA-X: A novel fine-mapping method for admixed population.
+Version: 1.0.0
+Date: 2024-10-19
+Author: Zikun Yang [aut, cre, cph],
+        Chen Wang [aut, ctb],
+        Iuliana Ionita-Laza [aut, ctb].
+Maintainer: Zikun Yang <yangzikun1125@gmail.com>
+Description:We propose here a novel fine-mapping method (CARMA-X) for admixed settings that improves upon existing methods in several directions, including: (1) flexible prior distributions that can model heterogeneity in effects across ancestries, (2) a new method to estimate cross-ancestry LD, and (3) a Bayesian hypothesis test to detect and correct for discrepancies between summary statistics and external LD to avoid false positives.
+License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
+    license
+Encoding: UTF-8
+Imports: methods, stats, dplyr, glmnet, Matrix, MASS, Rcpp (>= 1.0.6)
+LinkingTo: Rcpp, RcppArmadillo, RcppGSL
+RoxygenNote: 7.3.2
+NeedsCompilation: yes
