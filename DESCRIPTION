@@ -1,5 +1,5 @@
 Package: CARMAX
-Title: CARMA-X: A novel fine-mapping method for admixed population.
+Title: CARMA-X: A novel fine-mapping method for admixed population
 Version: 1.0.0
 Date: 2024-10-19
 Author: Zikun Yang [aut, cre, cph],
@@ -10,7 +10,7 @@ Description:We propose here a novel fine-mapping method (CARMA-X) for admixed se
 License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
     license
 Encoding: UTF-8
-Imports: methods, stats, dplyr, glmnet, Matrix, MASS, Rcpp (>= 1.0.6)
+Imports: methods, stats, dplyr, Matrix, MASS, Rcpp
 LinkingTo: Rcpp, RcppArmadillo, RcppGSL
 RoxygenNote: 7.3.2
 NeedsCompilation: yes

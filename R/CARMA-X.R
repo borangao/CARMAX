@@ -23,7 +23,6 @@
 #'@param all.iter Maximum iterations for EM algorithm to run.
 #'@param output.labels Output directory where output will be written while CARMA is running. Default is the OS root directory ".".
 #'@param epsilon.threshold Convergence threshold measured by average of Bayes factors.
-#'@param ... Other parameters for fine-tuning the model.
 #'@return The form of the return is a list, for each list:
 #'\itemize{
 #'\item pip - The posterior inclusion probability.
