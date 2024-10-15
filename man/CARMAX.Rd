@@ -60,8 +60,6 @@ CARMAX(
 \item{outlier.switch}{The indicator variable of whether turn on the outlier detection. We suggest that the detection should always turn on if using external LD matrix.}
 
 \item{outlier.BF.index}{The threshold of the Bayes factor of the hypothesis testing of determining outliers, which is 1/3.2 by default.}
-
-\item{...}{Other parameters for fine-tuning the model.}
 }
 \value{
 The form of the return is a list, for each list:

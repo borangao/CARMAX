@@ -1,3 +1,12 @@
+#' Utility function for processing z and ld matrices
+#'
+#' This function takes summary statistics and LD matrices as input and computes 
+#' a joint LD matrix used for the CARMA-X fine-mapping model.
+#'
+#' @param z.list A list of z-score summary statistics for different ancestries.
+#' @param ld.list A list of LD matrices for different ancestries.
+#' @return A combined LD matrix for all ancestries.
+#' @export
 utility<-function(z.list,ld.list){
 
   p<-nrow(z.list[[1]])
