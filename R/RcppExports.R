@@ -9,7 +9,7 @@ NULL
 NULL
 
 Cauchy_marginal <- function(index_vec_input, Sigma, z, zSigmaz, tau, p, p_S) {
-    .Call('_CARMAX_Cauchy_marginal', PACKAGE = 'CARMAX', index_vec_input, Sigma, z, zSigmaz, tau, p, p_S)
+    .Call(`_CARMAX_Cauchy_marginal`, index_vec_input, Sigma, z, zSigmaz, tau, p, p_S)
 }
 
 #'@name Cauchy_fixed_sigma_marginal
@@ -20,7 +20,7 @@ NULL
 NULL
 
 Cauchy_fixed_sigma_marginal <- function(index_vec_input, Sigma, z, tau, p_S, y_sigma) {
-    .Call('_CARMAX_Cauchy_fixed_sigma_marginal', PACKAGE = 'CARMAX', index_vec_input, Sigma, z, tau, p_S, y_sigma)
+    .Call(`_CARMAX_Cauchy_fixed_sigma_marginal`, index_vec_input, Sigma, z, tau, p_S, y_sigma)
 }
 
 #'@name Normal_fixed_sigma_effect_size
@@ -31,7 +31,7 @@ NULL
 NULL
 
 Normal_fixed_sigma_effect_size <- function(index_vec_input, Sigma, z, tau, p_S, y_sigma) {
-    .Call('_CARMAX_Normal_fixed_sigma_effect_size', PACKAGE = 'CARMAX', index_vec_input, Sigma, z, tau, p_S, y_sigma)
+    .Call(`_CARMAX_Normal_fixed_sigma_effect_size`, index_vec_input, Sigma, z, tau, p_S, y_sigma)
 }
 
 #'@name hyper_g_marginal
@@ -42,7 +42,7 @@ NULL
 NULL
 
 hyper_g_marginal <- function(index_vec_input, Sigma, z, zSigmaz, p, tau, p_S) {
-    .Call('_CARMAX_hyper_g_marginal', PACKAGE = 'CARMAX', index_vec_input, Sigma, z, zSigmaz, p, tau, p_S)
+    .Call(`_CARMAX_hyper_g_marginal`, index_vec_input, Sigma, z, zSigmaz, p, tau, p_S)
 }
 
 #'@name hyper_g_fixed_sigma_marginal
@@ -53,7 +53,7 @@ NULL
 NULL
 
 hyper_g_fixed_sigma_marginal <- function(index_vec_input, Sigma, z, tau, p_S, y_sigma) {
-    .Call('_CARMAX_hyper_g_fixed_sigma_marginal', PACKAGE = 'CARMAX', index_vec_input, Sigma, z, tau, p_S, y_sigma)
+    .Call(`_CARMAX_hyper_g_fixed_sigma_marginal`, index_vec_input, Sigma, z, tau, p_S, y_sigma)
 }
 
 #'@name Normal_fixed_sigma_marginal
@@ -64,7 +64,7 @@ NULL
 NULL
 
 ind_Normal_fixed_sigma_marginal <- function(index_vec_input, Sigma, z, tau, p_S, y_sigma) {
-    .Call('_CARMAX_ind_Normal_fixed_sigma_marginal', PACKAGE = 'CARMAX', index_vec_input, Sigma, z, tau, p_S, y_sigma)
+    .Call(`_CARMAX_ind_Normal_fixed_sigma_marginal`, index_vec_input, Sigma, z, tau, p_S, y_sigma)
 }
 
 #'@name Normal_marginal
@@ -75,7 +75,7 @@ NULL
 NULL
 
 Normal_marginal <- function(index_vec_input, Sigma, z, zSigmaz, tau, p, p_S) {
-    .Call('_CARMAX_Normal_marginal', PACKAGE = 'CARMAX', index_vec_input, Sigma, z, zSigmaz, tau, p, p_S)
+    .Call(`_CARMAX_Normal_marginal`, index_vec_input, Sigma, z, zSigmaz, tau, p, p_S)
 }
 
 #'@name Normal_fixed_sigma_marginal
@@ -86,7 +86,7 @@ NULL
 NULL
 
 Normal_fixed_sigma_marginal <- function(index_vec_input, Sigma, z, tau, p_S, y_sigma) {
-    .Call('_CARMAX_Normal_fixed_sigma_marginal', PACKAGE = 'CARMAX', index_vec_input, Sigma, z, tau, p_S, y_sigma)
+    .Call(`_CARMAX_Normal_fixed_sigma_marginal`, index_vec_input, Sigma, z, tau, p_S, y_sigma)
 }
 
 #'@name Cauchy_fixed_sigma_marginal
@@ -97,7 +97,7 @@ NULL
 NULL
 
 outlier_Cauchy_fixed_sigma_marginal <- function(index_vec_input, Sigma, z, tau, p_S, y_sigma) {
-    .Call('_CARMAX_outlier_Cauchy_fixed_sigma_marginal', PACKAGE = 'CARMAX', index_vec_input, Sigma, z, tau, p_S, y_sigma)
+    .Call(`_CARMAX_outlier_Cauchy_fixed_sigma_marginal`, index_vec_input, Sigma, z, tau, p_S, y_sigma)
 }
 
 #'@name Normal_fixed_sigma_marginal
@@ -108,7 +108,7 @@ NULL
 NULL
 
 outlier_ind_Normal_marginal <- function(index_vec_input, Sigma, z, tau, p_S, y_sigma) {
-    .Call('_CARMAX_outlier_ind_Normal_marginal', PACKAGE = 'CARMAX', index_vec_input, Sigma, z, tau, p_S, y_sigma)
+    .Call(`_CARMAX_outlier_ind_Normal_marginal`, index_vec_input, Sigma, z, tau, p_S, y_sigma)
 }
 
 #'@name Normal_fixed_sigma_marginal
@@ -119,6 +119,10 @@ NULL
 NULL
 
 outlier_Normal_fixed_sigma_marginal <- function(index_vec_input, Sigma, z, tau, p_S, y_sigma) {
-    .Call('_CARMAX_outlier_Normal_fixed_sigma_marginal', PACKAGE = 'CARMAX', index_vec_input, Sigma, z, tau, p_S, y_sigma)
+    .Call(`_CARMAX_outlier_Normal_fixed_sigma_marginal`, index_vec_input, Sigma, z, tau, p_S, y_sigma)
+}
+
+rcpp_hello_world <- function() {
+    .Call(`_CARMAX_rcpp_hello_world`)
 }
 

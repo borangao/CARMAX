@@ -191,6 +191,16 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// rcpp_hello_world
+List rcpp_hello_world();
+RcppExport SEXP _CARMAX_rcpp_hello_world() {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    rcpp_result_gen = Rcpp::wrap(rcpp_hello_world());
+    return rcpp_result_gen;
+END_RCPP
+}
 
 static const R_CallMethodDef CallEntries[] = {
     {"_CARMAX_Cauchy_marginal", (DL_FUNC) &_CARMAX_Cauchy_marginal, 7},
@@ -204,6 +214,7 @@ static const R_CallMethodDef CallEntries[] = {
     {"_CARMAX_outlier_Cauchy_fixed_sigma_marginal", (DL_FUNC) &_CARMAX_outlier_Cauchy_fixed_sigma_marginal, 6},
     {"_CARMAX_outlier_ind_Normal_marginal", (DL_FUNC) &_CARMAX_outlier_ind_Normal_marginal, 6},
     {"_CARMAX_outlier_Normal_fixed_sigma_marginal", (DL_FUNC) &_CARMAX_outlier_Normal_fixed_sigma_marginal, 6},
+    {"_CARMAX_rcpp_hello_world", (DL_FUNC) &_CARMAX_rcpp_hello_world, 0},
     {NULL, NULL, 0}
 };
 
