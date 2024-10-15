@@ -6,13 +6,6 @@
 #' CARMA-X includes an LD estimation procedure to correct for inconsistencies introduced by external LD reference panels, 
 #' which is important for admixed populations where reference LD structures may be less accurate to the results of local ancestry inferences on admixed cohorts. 
 #' Additionally, CARMA-X offers a robust outlier detection procedure that resolves discrepancies between the summary statistics and the LD matrix derived from reference panels.
-
-Undocumented arguments in documentation object 'CARMAX'
-‘outlier.hypo.form’ ‘multi.ethnic’ ‘tau’ ‘outlier.BF.index’
-‘purity.index’
-Documented arguments not in \usage in documentation object 'CARMAX':
-  ‘outlier.threshold’
-
 #'@param z.list Input list of the summary statistics of the testing loci, and each element of the list is the summary statistics of each ancestry of the admixed cohort.
 #'@param ld.list Input list of the LD correlation matrix of the testing loci, and each element of the list is the LD matrix of each ancestry of the admixed cohort. The last element of the list is the overall LD matrix that captures correlations across ancestries. 
 #'@param lambda.list Input list of the hyper-parameter \eqn{\eta} of the testing loci, and each element of the list is the hyper-parameter of each ancestry of the admixed cohort.

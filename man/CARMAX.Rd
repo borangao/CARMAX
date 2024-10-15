@@ -14,12 +14,10 @@ CARMAX(
   effect.size.prior = "Spike-slab",
   rho.index = 0.99,
   BF.index = 10,
-  outlier.hypo.form = "New.way",
   Max.Model.Dim = 2e+05,
   all.iter = 3,
   all.inner.iter = 10,
   epsilon.threshold = 1e-04,
-  multi.ethnic = "admixed",
   num.causal = 10,
   y.var = 1,
   tau = 0.04,
@@ -45,7 +43,7 @@ CARMAX(
 
 \item{rho.index}{A number between 0 and 1 specifying \eqn{\rho} of the estimated credible sets.}
 
-\item{BF.index}{A number smaller than 1 to specifying the threshold of the Bayes factor of the estimated credible models. The default setting is 3.2.}
+\item{BF.index}{A number smaller than 1 to specifying the threshold of the Bayes factor of the estimated credible models. The default setting is 10.}
 
 \item{Max.Model.Dim}{Maximum number of the top candidate models based on the unnormalized posterior probability.}
 
@@ -61,7 +59,9 @@ CARMAX(
 
 \item{outlier.switch}{The indicator variable of whether turn on the outlier detection. We suggest that the detection should always turn on if using external LD matrix.}
 
-\item{outlier.threshold}{The Bayes threshold of the hypothesis testing of determining outliers, which is 10 by default.}
+\item{outlier.BF.index}{The threshold of the Bayes factor of the hypothesis testing of determining outliers, which is 1/3.2 by default.}
+
+\item{...}{Other parameters for fine-tuning the model.}
 }
 \value{
 The form of the return is a list, for each list:
