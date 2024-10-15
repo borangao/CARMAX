@@ -225,41 +225,10 @@ CARMAX<-function(z.list,ld.list,lambda.list=NULL,output.labels='.',label.list=NU
     model.prior='Poisson'
     standardize.model.space=T
     ld.all<-bdiag(ld.list)
-    if(multi.ethnic=='admixed'){
-      ######
-      
-      if(LD.estimation){
-        p<-nrow(z.list[[1]])
-        
-        z<-as.matrix(c(z.list[[1]],z.list[[2]]))
-        
-        S0<-matrix(0,2*p,2*p)
-        
-        S0[1:p,1:p]<-ld.list[[1]]
-        S0[1:p+p,1:p+p]<-ld.list[[2]]
-        nu0=2*p+2
-        S<-S0+z%*%t(z)/max(z^2)
-        S<-S+diag(0.001,nrow(S))
-        
-        ES<-S/(nu0+1-1-2*p)
-        DS<-diag(ES)
-        ds_inv<-diag(1/sqrt(DS))
-        ESR<-t(ds_inv)%*%ES%*%ds_inv
-        R<-ESR
-        diag(R)<-1
-        s.off<-R[1:p,1:p+p]
-        S0[1:p,1:p+p]<-s.off
-        S0[1:p+p,1:p]<-t(s.off)
-        ld.all<-S0
-      }else{
-        ld.all<-ld.list[[3]]
-      }
-}
-    L=1
-  
-    #######
-    outlier.hypo.form='New.way'
     multi.ethnic='admixed'
+    L=1
+    outlier.hypo.form='New.way'
+  
   }
 #########Module model##########
   
@@ -1125,6 +1094,11 @@ CARMAX<-function(z.list,ld.list,lambda.list=NULL,output.labels='.',label.list=NU
   }
   ######## All burning###########
   previous.result<-list()
+  if(LD.estimation){
+    ld.all<-utility(z.list,ld.list)
+  }else{
+    ld.all<-ld.list[[3]]
+  }
   
   for(i in 1:L){
     t0=Sys.time()
