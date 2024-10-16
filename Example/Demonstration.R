@@ -3,7 +3,7 @@ rm(list=ls())
 devtools::install_github("ZikunY/CARMAX")  
 
 library(CARMAX)
-setwd('/Volumes/My_Passport/1000Genome/Multi_study/test')# Set your local directory
+setwd('...')# Set your local directory
 dt<-readRDS('./CARMAX/Example/Example.rds') 
 
 lambda.power<-1
