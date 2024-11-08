@@ -30,5 +30,5 @@ utility<-function(z.list,ld.list){
   S0[1:p,1:p+p]<-s.off
   S0[1:p+p,1:p]<-t(s.off)
   ld.all<-S0
-  return(S0)
+  return(R)
 }
