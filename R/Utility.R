@@ -1,3 +1,4 @@
+#' @keywords internal
 #' Utility function for processing z and ld matrices
 #'
 #' This function takes summary statistics and LD matrices as input and computes 
