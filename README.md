@@ -1,6 +1,10 @@
 # CARMAX
 A robust fine-mapping method for admixed populations.
 
+## Vignette
+
+The webpage `https://zikuny.github.io/CARMAX/` provides a comprehensive walkthrough of running CARMA-X with an example dataset of simulated admixed populations.
+
 ## Example
 
 To run the example, first download the example data from the repository to your local directory:
