@@ -32,24 +32,7 @@
 #'}
 #'@details The function performs a Bayesian fine-mapping method. 
 #'@examples 
-#'# Example 
-#'set.seed(1)
-#'n = 400
-#'p = 500
-#'beta = rep(0,p)
-#'beta[1] = 1
-#'X = matrix(rnorm(n*p),nrow = n,ncol = p)
-#'X = scale(X,center = TRUE,scale = TRUE)
-#'y = drop(X %*% beta + rnorm(n))
-#'SS=compute_summary_statistics(X,y)
-#'z.list<-list()
-#'z.list[[1]]<-(SS$betahat/SS$sebetahat)
-#'ld.list<-list()
-#'ld.list[[1]]<-cov(X)
-#'lambda.list<-list()
-#'lambda.list[[1]]<-1/sqrt(p)
-#'CARMA.result<-CARMA_fixed_sigma(z.list,ld.list=ld.list,
-#'lambda.list = lambda.list,effect.size.prior='Hyper-g')
+
 CARMAX<-function(z.list,ld.list,lambda.list=NULL,output.labels='.',label.list=NULL,LD.estimation=T,
                                  effect.size.prior='Spike-slab',rho.index=0.99,BF.index=10,
                                 Max.Model.Dim=2e+5,all.iter=3,all.inner.iter=10,epsilon.threshold=1e-4,
