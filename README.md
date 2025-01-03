@@ -3,7 +3,7 @@ CARMA-X is a fine-mapping method designed for admixed populations, leveraging an
 
 ## Vignette
 
-The webpage `https://zikuny.github.io/CARMAX/` provides a comprehensive walkthrough of running CARMA-X with an example dataset of simulated admixed populations.
+The CARMA-X webpage `https://zikuny.github.io/CARMAX/` provides a detailed walkthrough for setting up and running CARMA-X, including step-by-step instructions and explanations. It guides users through fine-mapping analysis using an example dataset designed to simulate admixed populations, showcasing key features and outputs of the method.
 
 ## Example
 
